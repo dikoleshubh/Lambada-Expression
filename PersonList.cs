@@ -56,5 +56,21 @@ namespace LambadaExpression
                 Console.WriteLine(ex.Message);
             }
         }
+
+        //UC4 Retrieve average age in the list
+        public static void FindAvgAgeForAll(List<Person> list)//Parametrized Constructor
+        {
+            try
+            {
+                var result = list.Average(x => x.Age);
+
+                Console.WriteLine("Average age among all persons\t" + result);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
