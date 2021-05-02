@@ -96,5 +96,23 @@ namespace LambadaExpression
                 Console.WriteLine(ex.Message);
             }
         }
+
+        //UC6 Vomit less than 60
+        public static void SkipLessThan60(List<Person> list)
+        {
+            try
+            {
+                var result = list.FindAll(x => x.Age > 60);
+                foreach (Person person in result)
+                {
+
+                    Console.WriteLine("Age\t" + person.Age + "Name\t" + person.Name + "\t" + "Address\t" + person.Address);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
