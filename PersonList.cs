@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
+
 
 namespace LambadaExpression
 {
     class PersonList
 
-    { //UC1 person management
+    { //UC1 PERSON PROFILE MANAGEMENT
         List<Person> list = new List<Person>();
         public static void AddingPersonDetails(List<Person> personList) //creating method
         {
@@ -23,6 +25,17 @@ namespace LambadaExpression
             foreach (Person person in personlist)
             {
                 Console.WriteLine("Age\t" + person.Age + "\t" + "Name\t" + person.Name + "\t" + "Address\t" + person.Address);
+            }
+        }
+
+        //UC2 Retrieve top two age less than 60
+        public static void RetrieveTop2(List<Person> list)
+        {
+            var result = list.FindAll(x => x.Age < 60).OrderBy(x => x.Age).Take(2);
+            foreach (Person person in result)
+            {
+                Console.WriteLine("Age\t" + person.Age + "Name\t" + person.Name + "\t" + "Address\t" + person.Address);
+
             }
         }
     }
