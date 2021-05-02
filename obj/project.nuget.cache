@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MYA2Je8zotSRUyfxLuKrZEy/97zSd7NgpPqdwG+ROfd3o5zWZllTM/8rNS/zhpI0Hf5va18LEQytco/2JBCcEQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\LambadaExpression\\LambadaExpression.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.14\\microsoft.netcore.app.host.win-x64.3.1.14.nupkg.sha512"
+  ],
+  "logs": []
+}
