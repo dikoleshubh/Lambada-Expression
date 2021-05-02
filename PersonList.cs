@@ -64,7 +64,31 @@ namespace LambadaExpression
             {
                 var result = list.Average(x => x.Age);
 
-                Console.WriteLine("Average age among all persons\t" + result);
+                Console.WriteLine("Average age among all People\t" + result);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        //UC5 Search for specific name in the list
+        public static void SearchPerson(List<Person> list)
+        {
+            try
+            {
+                var person = list.Where(x => x.Name == "CONAN").First();
+                if (person != null)
+                {
+                    Console.WriteLine("person present");
+
+                    Console.WriteLine("Age\t" + person.Age + "Name\t" + person.Name + "\t" + "Address\t" + person.Address);
+                }
+                else
+                {
+                    Console.WriteLine("person not exist in a list");
+                }
 
             }
             catch (Exception ex)
