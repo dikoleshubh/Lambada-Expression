@@ -20,7 +20,7 @@ namespace LambadaExpression
             personList.Add(new Person() { SSN = 7, Age = 56, Name = "STARK", Address = "KINGS LANDING" });
             IterateOverList(personList);
         }
-        public static void IterateOverList(List<Person> personlist)
+        public static void IterateOverList(List<Person> personlist) //Parametrized Constructor
         {
             foreach (Person person in personlist)
             {
@@ -29,13 +29,31 @@ namespace LambadaExpression
         }
 
         //UC2 Retrieve top two age less than 60
-        public static void RetrieveTop2(List<Person> list)
+        public static void RetrieveTop2(List<Person> list) //Parametrized Constructor
         {
             var result = list.FindAll(x => x.Age < 60).OrderBy(x => x.Age).Take(2);
             foreach (Person person in result)
             {
                 Console.WriteLine("Age\t" + person.Age + "Name\t" + person.Name + "\t" + "Address\t" + person.Address);
 
+            }
+        }
+
+        //UC3 Retrieve age between 13 to 18 years
+        public static void Retrieve(List<Person> list) //Parametrized Constructor
+        {
+            try
+            {
+                var result = list.FindAll(x => x.Age > 13 && x.Age < 18);
+                foreach (Person person in result)
+                {
+                    Console.WriteLine("Age\t" + person.Age + "Name\t" + person.Name + "\t" + "Address\t" + person.Address);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }
